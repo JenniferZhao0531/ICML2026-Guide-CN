@@ -571,7 +571,7 @@ def build():
     <div class="sub">{total} 篇 · {n_pri} 个大类 · {n_sub_total} 个细分 · {n_subsub_total} 个三级</div>
     <div class="sister-site">
       <a href="https://jenniferzhao0531.github.io/ICLR2026-Guide-CN/" target="_blank">
-        🔗 姊妹站：ICLR 2026 论文 · 中文导读
+        🔄 切换至 ICLR 2026 版
         <span class="arrow">→</span>
       </a>
     </div>
