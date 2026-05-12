@@ -163,6 +163,12 @@ h4.subsub-title small{font-size:11.5px;color:#6a737d;font-weight:400;margin-left
 .paper.expanded .full-abs{display:block}
 .paper.expanded .toggle-abs::before{content:"▾ "}
 .paper:not(.expanded) .toggle-abs::before{content:"▸ "}
+/* 提示条 */
+.info-notice{background:#fffbea;border:1px solid #f9c513;border-radius:6px;padding:12px 18px;margin:18px 0 24px;font-size:13px;color:#735c0f;line-height:1.75}
+.info-notice b{color:#5a4500}
+.info-notice ul{margin:6px 0 0 22px;padding:0}
+.info-notice li{margin:4px 0}
+.info-notice code{background:#fff4d4;padding:1px 6px;border-radius:3px;color:#5a4500;font-size:12px}
 .hidden{display:none !important}
 .empty{text-align:center;color:#959da5;padding:40px;font-size:14px}
 .no-cn{font-style:italic;color:#959da5}
@@ -599,6 +605,14 @@ def build():
         <span class="tier-chip all active" data-tier="__all__">📚 全部 {total} 篇</span>
         {f'<span class="tier-chip Oral" data-tier="Oral">🎤 Oral {n_oral} 篇</span>' if n_oral > 0 else ''}
         {f'<span class="tier-chip Spotlight" data-tier="Spotlight">⭐ Spotlight {n_spotlight} 篇</span>' if n_spotlight > 0 else ''}
+      </div>
+      <div class="info-notice">
+        💡 <b>关于论文链接的说明：</b>
+        <ul>
+          <li>点击<b>论文标题</b> → 跳转到 <b>Google Scholar</b> 按标题搜索的结果（通常第一条就能找到 arxiv 版本拿到 PDF）</li>
+          <li>点击 <code>📝 OpenReview</code> → ICML 2026 的 OpenReview forum 在大会临近前是非公开的，<b>目前点击会提示无权限</b>，等会议公开后即可正常访问</li>
+          <li>点击 <code>🌐 ICML</code> → ICML 官方会议站论文页，<b>目前仅有 abstract 和作者信息</b>，没有正文 PDF</li>
+        </ul>
       </div>
     </div>
     {''.join(pri_secs)}
